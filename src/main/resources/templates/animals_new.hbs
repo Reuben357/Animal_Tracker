@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD START -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta content="A small animal tracking application." name="description" />
+    <meta content="Reuben Gathii" name="author" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/images/panda.svg">
+
+    <!-- App css -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          crossorigin="anonymous"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh">
+    <link rel="stylesheet" href="/css/app.css" type="text/css"/>
+    <title>{{#block 'title'}}Animal Tracker{{/block}}</title>
+</head>
+<!-- HEAD END -->
+<body>
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg py-lg-3 navbar-custom-bg">
+        <div class="container">
+
+            <!-- logo -->
+            <a href="/" class="navbar-brand mr-lg-5">
+                <img src="/images/panda.svg" alt="" class="logo-dark" height="30" />
+            </a>
+
+            <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="mdi mdi-menu"></i>
+            </button>
+
+            <!-- menus -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <!-- left menu -->
+                <ul class="navbar-nav mr-auto align-items-center">
+                    <li class="nav-item mx-lg-1">
+                        <a class="nav-link active" href="">Home</a>
+                    </li>
+                    <li class="nav-item mx-lg-1">
+                        <a class="nav-link" href="/animals/">Animals</a>
+                    </li>
+                </ul>
+
+                <!-- right menu -->
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item mr-0">
+                        <a href="/animals/new/"
+                           class="nav-link d-lg-none">Add Animal</a>
+                        <a href="/animals/new/"
+                           class="btn btn-md btn-yellow btn-rounded d-none d-lg-inline-flex">
+                            Add Animal
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-title-box">
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active">Animals</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="header-title">Enter animal data</h4>
+                        <p class="text-muted font-14">
+                        </p>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <form action="/animals/" method="POST" class="form-group">
+                                    <div class="form-group mb-3">
+                                        <label for="animal-name">Name</label>
+                                        <input type="text" id="animal-name" class="form-control" name="animal-name">
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label for="animal-age">Age</label>
+                                        <select class="form-control" id="animal-age" name="animal-age">
+                                            <option selected disabled>Select an animal age.</option>
+                                            <option>Adult</option>
+                                            <option>Newborn</option>
+                                            <option>Young</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label for="animal-health-status">Health Status</label>
+                                        <select class="form-control" id="animal-health-status" name="animal-health-status">
+                                            <option selected disabled>Select an animal's health status.</option>
+                                            <option>Healthy</option>
+                                            <option>Ill</option>
+                                            <option>Okay</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <input type="checkbox" id="animal-is-endangered" name="animal-is-endangered">
+                                        <label for="animal-is-endangered">
+                                            Is Endangered
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label for="animal-name">Sighting</label>
+                                        <input type="text" id="animal-sighting" class="form-control" name="animal-sighting">
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <button class="btn btn-md btn-yellow btn-rounded" href="/animals/" type="submit">Record Animal</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</html>
