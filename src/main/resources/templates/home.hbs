@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- HEAD START -->
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=2.0">
+        <meta content="A small animal tracking application." name="description" />
+        <meta content="Reuben Gathii" name="author" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="/images/panda.svg">
+
+        <!-- App css -->
+        <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              crossorigin="anonymous"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh">
+        <link rel="stylesheet" href="/css/app.css" type="text/css"/>
+        <title>{{#block 'title'}}Animal Tracker{{/block}}</title>
+    </head>
+    <!-- HEAD END -->
+
+    <body>
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg py-lg-3 navbar-custom-bg">
+        <div class="container">
+
+            <!-- logo -->
+            <a href="home.hbs" class="navbar-brand mr-lg-5">
+                <img src="/images/panda.svg" alt="" class="logo-dark" height="30" />
+            </a>
+
+            <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="mdi mdi-menu"></i>
+            </button>
+
+            <!-- menus -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <!-- left menu -->
+                <ul class="navbar-nav mr-auto align-items-center">
+                    <li class="nav-item mx-lg-1">
+                        <a class="nav-link active" href="">Home</a>
+                    </li>
+                    <li class="nav-item mx-lg-1">
+                        <a class="nav-link" href="/animals/">Animals</a>
+                    </li>
+                </ul>
+
+                <!-- right menu -->
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item mr-0">
+                        <a href="/animals/new/"
+                           class="nav-link d-lg-none">Add Animal</a>
+                        <a href="/animals/new/"
+                           class="btn btn-md btn-yellow btn-rounded d-none d-lg-inline-flex">
+                            Add Animal
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- START HERO -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <div class="mt-md-4">
+                        <div>
+                            <span class="headline-text ml-1">Welcome to Animal Tracker</span>
+                        </div>
+                        <h2 class="headline-text font-weight-normal mb-4 mt-3 hero-title">
+                            A Java Spark application for all your animal tracking needs
+                        </h2>
+
+                        <p class="mb-4 font-16 paragraph-text">
+                            This tool helps you record animal sightings in whatever context best suits your use case.
+                            It enables you to record animal details such as name, age, health status, whether the animal
+                            is endangered or not among other cool things.
+                        </p>
+
+                        <a href="/animals/" class="btn btn-yellow">Checkout Our Animals <i
+                                class="mdi mdi-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-5 offset-md-2">
+                    <div class="text-md-right mt-3 mt-md-0">
+                        <img src="/images/animal-profile.svg" alt="" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END HERO -->
+
+    <!-- Footer Start -->
+    <footer class="bg-dark-green">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="mt-5">
+                    <p class="text-white-50 mt-2 text-center pb-2">
+                        © 2020 Animal Tracker. Design and coded by Reuben Gathii
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end Footer -->
+
+    </body>
+    <!-- App JS scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</html>
