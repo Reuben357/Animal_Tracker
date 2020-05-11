@@ -1,0 +1,12 @@
+html, body{
+  font-family: 'Poppins', sans-serif;
+  background-color: $page-bg;
+}
+
+.bg-dark-green {
+  background-color: $headline-text;
+}
+
+.tab-content {
+  overflow: auto;
+}

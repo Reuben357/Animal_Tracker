@@ -1,0 +1,9 @@
+.btn-yellow{
+  background-color: $button-bg;
+  color: $primary-bg;
+  text-align: center;
+
+  &:hover {
+    color: $button-text;
+  }
+}

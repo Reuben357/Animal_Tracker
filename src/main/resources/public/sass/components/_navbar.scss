@@ -1,0 +1,12 @@
+.navbar-custom-bg {
+  background-color: $primary-bg;
+
+  .nav-link {
+    color: $gray;
+
+    &:hover{
+      color: $white;
+    }
+
+  }
+}
